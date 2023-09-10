@@ -1,6 +1,7 @@
+//7. Write a program to copy file1 into file2 ($cp file1 file2).
 #include <sys/types.h>
-       #include <sys/stat.h>
-       #include <fcntl.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 #include<stdio.h>
 #include<unistd.h>
 

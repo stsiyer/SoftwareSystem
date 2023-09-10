@@ -1,3 +1,14 @@
+/*
+
+============================================================================
+Name : 17.c
+Author : Sreeganesh T S
+Description : Write a program to simulate online ticket reservation. 
+	a.Write a program to open a file, store a ticket number and exit.
+Date: 25th Aug, 2023.
+============================================================================
+
+*/
 #include<fcntl.h>
 #include<unistd.h>
 #include<stdio.h>
