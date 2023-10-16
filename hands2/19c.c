@@ -1,7 +1,7 @@
 /*
 ============================================================================
 Name : 19c.c
-Author : Souvik Ghosh
+Author : Sreeganesh T S
 Description : Create a FIFO file by
     mknod system call
 Date: 19th Sept, 2023.

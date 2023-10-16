@@ -1,31 +1,29 @@
-#include<stdio.h>
+/*
+============================================================================
+Name : 15.c
+Author : Sreeganesh T S
+Description : Write a simple program to send some data from parent to the child process.
+Date: 16th Sept, 2023.
+============================================================================
+*/
+
 #include<unistd.h>
+#include<string.h>
 
+int main(void) {
+    int fd[2];
+    pipe(fd);
+    if(fork()) {
+        char* str = "Message from parent\n";
+        close(fd[0]);
+        write(fd[1], str, strlen(str));
+    } else {
+        int count;
+        char buff[80];
+        close(fd[1]);
+        count = read(fd[0], buff, sizeof(buff));
+        write(1, buff, count);
+    }
 
-int main()
-{
-	char buf[50];
-	int fd[2];
-
-	pipe(fd); //always create pipe before fork()
-	
-	if(fork()) //parent
-	{
-		close(fd[0]); //closing the read end of pipe
-		
-		printf("Enter msg to child : ");
-		scanf("%[^\n]",buf);
-
-		write(fd[1], buf, sizeof(buf));
-	}
-	else //child
-	{
-		close(fd[1]); //close write end of pipe
-
-		read(fd[0], buf, sizeof(buf));
-
-		printf("Msg from parent : %s\n", buf);
-	}
-
-	return 0;
+    return 0;
 }

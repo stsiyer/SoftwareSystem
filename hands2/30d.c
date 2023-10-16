@@ -1,21 +1,23 @@
+/*
+============================================================================
+Name : 30b.c
+Author : Souvik Ghosh
+Description : Write a program to create a shared memory.
+d. remove the shared memory
+Date: 19th Sept, 2023.
+============================================================================
+*/
+
+#include<unistd.h>
+#include<sys/ipc.h>
 #include<sys/shm.h>
 #include<stdio.h>
 
-int main()
-{
-        int shmid;
-        key_t key;
-        char *data;
+int main(void) {
+    key_t key = ftok(".", 'a');
+    int shmid = shmget(key, 1024, 0);
 
-	struct shmid_ds shm;
+    shmctl(shmid, IPC_RMID, NULL);
 
-        key = ftok(".", 'c');
-        shmid = shmget(key, 1024, 0);
-        data = shmat(shmid, 0, SHM_RDONLY);
-
-        //remove shm
-	shmctl(shmid, IPC_RMID, &shm);
-	perror(" ");
-
-        return 0;
+    return 0;
 }

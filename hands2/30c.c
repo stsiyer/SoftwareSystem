@@ -1,9 +1,9 @@
 /*
 ============================================================================
-Name : 30a.c
-Author : Sreeganesh T S
+Name : 30b.c
+Author : Souvik Ghosh
 Description : Write a program to create a shared memory.
-a. write some data to the shared memory
+c. detach the shared memory
 Date: 19th Sept, 2023.
 ============================================================================
 */
@@ -15,11 +15,10 @@ Date: 19th Sept, 2023.
 
 int main(void) {
     key_t key = ftok(".", 'a');
-    int shmid = shmget(key, 1024, IPC_CREAT | 0600);
+    int shmid = shmget(key, 1024, 0);
 
     char *data = shmat(shmid, 0, 0);
-    printf("Enter the text: ");
-    scanf("%[^\n]", data);
+    shmdt(data);
 
     return 0;
 }

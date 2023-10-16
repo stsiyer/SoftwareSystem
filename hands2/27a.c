@@ -1,31 +1,30 @@
-#include<sys/msg.h>
+/*
+============================================================================
+Name : 27a.c
+Author : Sreeganesh T S
+Description : Write a program to receive messages from the message queue.
+    a. with 0 as a flag
+Date: 29th Sept, 2023.
+============================================================================
+*/
+
+#include<unistd.h>
 #include<sys/ipc.h>
-#include<sys/types.h>
-#include<string.h>
+#include<sys/msg.h>
 #include<stdio.h>
 
-int main()
-{
-	int msgid, size;
-	key_t key;
+int main(void) {
+    struct msg {
+        int mtype;
+        char mtext[20];
+    } mq;
+    key_t key = ftok(".", 2);
+    int msgid = msgget(key, 0);
 
-	struct msg
-	{
-		long int mtype;
-		char message[50];
-	}mq;
+    printf("Enter msg type: ");
+    scanf("%d", &mq.mtype);
+    msgrcv(msgid, &mq, sizeof(mq.mtext), mq.mtype, 0);
+    printf("Message : %s", mq.mtext);
 
-	key = ftok(".", 'b');
-	msgid = msgget(key, 0);
-
-	printf("Enter msg type to receive : ");
-	scanf("%ld", &mq.mtype);
-
-	msgrcv(msgid, &mq, sizeof(mq.message), mq.mtype, 0);
-	
-	printf("Message type : %ld", mq.mtype);
-	perror(" ");
-	printf("\nMessage text : %s\n", mq.message);
-
-	return 0;
+    return 0;
 }

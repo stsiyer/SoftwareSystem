@@ -1,7 +1,7 @@
 /*
 ============================================================================
 Name : 17a.c
-Author : Souvik Ghosh
+Author : Sreeganesh T S
 Description : Write a program to execute ls -l | wc.
 a. use dup
 Date: 16th Sept, 2023.

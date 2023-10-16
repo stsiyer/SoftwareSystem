@@ -1,7 +1,7 @@
 /*
 ============================================================================
 Name : 17b.c
-Author : Souvik Ghosh
+Author : Sreeganesh T S
 Description : Write a program to execute ls -l | wc.
 b. use dup2
 Date: 16th Sept, 2023.
