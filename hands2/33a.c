@@ -1,7 +1,7 @@
 /*
 ============================================================================
 Name : 33a.c
-Author : Souvik Ghosh
+Author : Sreeganesh T S
 Description : Write a program to communicate between two machines using socket.
 Date: 20th Sept, 2023.
 ============================================================================

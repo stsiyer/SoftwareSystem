@@ -1,7 +1,7 @@
 /*
 ============================================================================
 Name : 32b.c
-Author : Souvik Ghosh
+Author : Sreeganesh T S
 Description : Write a program to implement semaphore to protect any critical section.
 b. Protect shared memory from concurrent write access
 Date: 13th Oct, 2023.

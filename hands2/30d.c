@@ -1,7 +1,7 @@
 /*
 ============================================================================
 Name : 30b.c
-Author : Souvik Ghosh
+Author : Sreeganesh T S
 Description : Write a program to create a shared memory.
 d. remove the shared memory
 Date: 19th Sept, 2023.

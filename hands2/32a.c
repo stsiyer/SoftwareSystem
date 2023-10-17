@@ -1,7 +1,7 @@
 /*
 ============================================================================
 Name : 32a.c
-Author : Souvik Ghosh
+Author : Sreeganesh T S
 Description : Write a program to implement semaphore to protect any critical section.
 a. Rewrite the ticket number creation program using semaphore
 Date: 13th Oct, 2023.

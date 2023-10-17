@@ -1,7 +1,7 @@
 /*
 ============================================================================
 Name : 32d.c
-Author : Souvik Ghosh
+Author : Sreeganesh T S
 Description : Write a program to implement semaphore to protect any critical section.
 d. Remove the created semaphore
 Date: 13th Oct, 2023.

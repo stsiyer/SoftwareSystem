@@ -1,7 +1,7 @@
 /*
 ============================================================================
 Name : 31b.c
-Author : Souvik Ghosh
+Author : Sreeganesh T S
 Description : Write a program to create a semaphore and initialize value to the semaphore.
 b. create a counting semaphore
 Date: 20th Sept, 2023.

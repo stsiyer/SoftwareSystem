@@ -1,7 +1,7 @@
 /*
 ============================================================================
 Name : 31a.c
-Author : Souvik Ghosh
+Author : Sreeganesh T S
 Description : Write a program to create a semaphore and initialize value to the semaphore.
 a. create a binary semaphore
 Date: 20th Sept, 2023.

@@ -1,7 +1,7 @@
 /*
 ============================================================================
 Name : 32c.c
-Author : Souvik Ghosh
+Author : Sreeganesh T S
 Description : Write a program to implement semaphore to protect any critical section.
 c. Protect multiple pseudo resources (may be two) using counting semaphore
 Date: 13th Oct, 2023.

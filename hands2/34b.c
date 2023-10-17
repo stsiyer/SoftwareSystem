@@ -1,7 +1,7 @@
 /*
 ============================================================================
 Name : 34b.c
-Author : Souvik Ghosh
+Author : Sreeganesh T S
 Description : Write a program to create a concurrent server.
     b. use pthread_create
 Date: 12th Oct, 2023.

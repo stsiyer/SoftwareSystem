@@ -1,7 +1,7 @@
 /*
 ============================================================================
 Name : 34a.c
-Author : Souvik Ghosh
+Author : Sreeganesh T S
 Description : Write a program to create a concurrent server.
     a. use fork
 Date: 12th Oct, 2023.
